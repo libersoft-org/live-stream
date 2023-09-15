@@ -24,6 +24,18 @@ class Data {
    process.exit(1);
   }
  }
+
+ async getStreams() {
+  return await this.db.read('SELECT id, name, id_source, path, created FROM streams');
+ }
+ 
+ async getSources() {
+  return await this.db.read('SELECT id, name FROM sources');
+ }
+
+ async getFiles(streamID) {
+  return await this.db.read('SELECT id, file, created FROM sources WHERE id_stream = ?', [ streamID ]);
+ }
 }
 
 module.exports = Data;

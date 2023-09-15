@@ -2,16 +2,21 @@ const fs = require('fs');
 const express = require('express');
 const ffmpeg = require('fluent-ffmpeg');
 const { Common } = require('./common.js');
+const data = require('./data.js');
 
 const app = express();
 const socketPath = './tmp/server.sock';
 
 class WebServer { 
  constructor() {
+  let streams = data.getStreams();
+  console.log(streams);
+  /*
+  for (let i = 0; i < streams; i++);
   app.use('/stream', (req, res) => {
    res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
    let ffmpegCommand = ffmpeg();
-   switch (settingsFile.sourceType) {
+   switch (streams) {
     case 'webcam':
      ffmpegCommand = ffmpegCommand.input(settingsFile.sourcePath).inputFormat('v4l2');
      break;
@@ -35,6 +40,7 @@ class WebServer {
    Common.addLog('Server running on Unix socket: ' + socketPath);
   });
   fs.chmodSync(socketPath, '777');
+  */
  }
 }
 
