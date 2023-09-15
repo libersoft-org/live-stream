@@ -3,7 +3,7 @@ const WebServer = require('./webserver.js');
 const fs = require('fs');
 
 class App {
- constructor() {
+ async run() {
   const args = process.argv.slice(2);
   switch (args.length) {
    case 0:
@@ -11,8 +11,7 @@ class App {
     break;
    case 1:
     if (args[0] === '--create-settings') this.createSettings();
-    if (args[0] === '--create-database') this.createDatabase();
-    if (args[0] === '--create-admin') this.createAdmin();
+    if (args[0] === '--create-database') await this.createDatabase();
     else this.getHelp();
     break;
    default:
@@ -57,7 +56,7 @@ class App {
 
  createSettings() {
   if (fs.existsSync(Common.settingsFile)) {
-   Common.addLog('Settings file "' + Common.settingsFile +  '" already exists. If you need to replace it with default one, delete the old one first.', 2);
+   Common.addLog('Settings file "' + Common.settingsFile +  '" already exists. If you need to replace it with a default one, delete the old one first.', 2);
    process.exit(1);
   } else {
    let settings = {
@@ -70,13 +69,17 @@ class App {
   }
  }
 
- createDatabase() {
+ async createDatabase() {
   this.loadSettings();
-  const Data = require('./data.js');
-  const data = new Data();
-  data.createDB();
-  Common.addLog('Database was created sucessfully.');
-  Common.addLog('');
+  if (!fs.existsSync(Common.settings.db_file)) {
+   const Data = require('./data.js');
+   const data = new Data();
+   await data.createDB();
+   Common.addLog('Database was created sucessfully.');
+  } else {
+   Common.addLog('Database file "' + Common.settings.db_file + '" already exists. If you need to replace it with a default one, delete the old one first.', 2);
+   process.exit(1);
+  }
  }
 }
 
