@@ -6,5 +6,6 @@
 - NEW - Create an IP cam stream
 - NEW - Add an API that shows / add / remove / edit streams (from settings.json)
 - NEW - Connect the web server to unix socket
-- NEW - Add a watermark to video
+- NEW - Add subpage in web to show one video only
 - NEW - Add the example of web server configuration file to README
+- NEW - Add a watermark to video
