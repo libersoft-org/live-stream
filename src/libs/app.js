@@ -23,7 +23,7 @@ class App {
  startServer() {
   try {
    this.loadSettings();
-   const header = 'Live Stream Server';
+   const header = Common.appName + ' v.' + Common.appVersion;
    const dashes = '='.repeat(header.length);
    Common.addLog('');
    Common.addLog(dashes);
