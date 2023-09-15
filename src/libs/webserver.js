@@ -2,17 +2,19 @@ const fs = require('fs');
 const express = require('express');
 const ffmpeg = require('fluent-ffmpeg');
 const { Common } = require('./common.js');
-const data = require('./data.js');
+const Data = require('./data.js');
 
 const app = express();
 const socketPath = './tmp/server.sock';
 
 class WebServer { 
- constructor() {
-  let streams = data.getStreams();
-  console.log(streams);
+ async run() {
+  const data = new Data();
+  let streams = await data.getStreams();
+  for (let i = 0; i < streams.length; i++) {
+   console.log(streams[i]);
+  }
   /*
-  for (let i = 0; i < streams; i++);
   app.use('/stream', (req, res) => {
    res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
    let ffmpegCommand = ffmpeg();

@@ -7,7 +7,7 @@ class App {
   const args = process.argv.slice(2);
   switch (args.length) {
    case 0:
-    this.startServer();
+    await this.startServer();
     break;
    case 1:
     if (args[0] === '--create-settings') this.createSettings();
@@ -20,7 +20,7 @@ class App {
   }
  }
 
- startServer() {
+ async startServer() {
   try {
    this.loadSettings();
    const header = Common.appName + ' v.' + Common.appVersion;
@@ -31,6 +31,7 @@ class App {
    Common.addLog(dashes);
    Common.addLog('');
    this.webServer = new WebServer();
+   this.webServer.run();
   } catch (ex) {
    Common.addLog(ex);
   }
