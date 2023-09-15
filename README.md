@@ -6,10 +6,6 @@
 
 - Early stage, not completed
 
-## License
-
-- This software is developed under the license called [**Unlicense**](./LICENSE).
-
 ## Installation instructions
 
 These are the installation instruction for **Debian Linux**:
@@ -76,3 +72,7 @@ Thank you for being a part of our projects' success!
 ## Star history
 
 [![Star History Chart](https://api.star-history.com/svg?repos=libersoft-org/live-stream&type=Date)](https://star-history.com/#libersoft-org/live-stream&Date)
+
+## License
+
+- This software is developed under the license called [**Unlicense**](./LICENSE).
