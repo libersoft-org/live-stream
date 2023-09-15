@@ -1,6 +1,6 @@
 # TODO
 
-- Add API that shows streams (from settings.json)
+- Add API that shows / add / remove / edit streams (from settings.json)
 - Connect web server to unix socket
 - Create video files stream (2 videos are in src/video folder)
 - Create webcam stream
