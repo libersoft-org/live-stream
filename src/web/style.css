@@ -1,0 +1,29 @@
+body {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 0px;
+ font-family: Ubuntu;
+ text-align: center;
+ background-color: #202020;
+ color: #FFFFFF;
+}
+
+a {
+ font-weight: bold;
+ text-decoration: none;
+ color: #FBD113;
+}
+
+.video {
+ margin: 5px;
+ width: 320px;
+ max-width: 100%;
+ border-radius: 10px;
+ background-color: #606060;
+}
+
+.margin {
+ margin-top: 10px;
+}

@@ -1,0 +1,8 @@
+.git/
+src/node_modules/
+src/tmp/*
+src/package-lock.json
+src/settings.json
+src/*.db
+src/*.log
+.secret_git

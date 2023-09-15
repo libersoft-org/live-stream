@@ -1,0 +1,8 @@
+{
+ "dependencies": {
+  "express": "*",
+  "fluent-ffmpeg": "*",
+  "sqlite": "*",
+  "sqlite3": "*"
+ }
+}

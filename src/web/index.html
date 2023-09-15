@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" />
+ </head>
+ <body>
+  <h1 id="title"></h1>
+  <div id="content">
+   <video class="video" controls>
+    <source src="/stream" type="application/vnd.apple.mpegurl">
+   </video>
+   <video class="video" controls>
+    <source src="/stream" type="application/vnd.apple.mpegurl">
+   </video>
+   <video class="video" controls>
+    <source src="/stream" type="application/vnd.apple.mpegurl">
+   </video>
+  </div>
+  <div id="footer">
+   <div class="margin"><a href="https://github.com/libersoft-org/live-stream" target="_blank">Live Stream</a> web service</div>
+   <div class="margin"><a href="https://libersoft.org" target="_blank">Liberland Software Foundation</a>, <span id="year"></span></div>
+  </div>
+  <script>
+   const title = 'Live Streams';
+   document.title = title;
+   document.querySelector('#title').innerHTML = title;
+   document.querySelector('#year').innerHTML = new Date().getFullYear();
+  </script>
+ </body>
+</html>
