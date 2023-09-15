@@ -12,17 +12,17 @@
 
 ## Installation instructions
 
-These are the installation instruction for **Debian Linux**
+These are the installation instruction for **Debian Linux**:
 
 1. Install system dependencies
 
 ```bash
 apt update
 apt -y upgrade
-apt install nginx nodejs npm
+apt -y install git nginx nodejs npm
 ```
 
-2. Download the latest version of this software from GitHub
+2. Download the latest version of this software:
 
 ```bash
 git clone https://github.com/libersoft-org/live-stream.git
@@ -43,7 +43,7 @@ cd /root/live-stream/src/
 mkdir tmp
 ```
 
-6. Install Node dependencies
+6. Install Node.js dependencies
 
 ```bash
 npm i
