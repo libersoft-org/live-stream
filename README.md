@@ -2,6 +2,8 @@
 
 [![Created Badge](https://badges.pufler.dev/created/libersoft-org/live-stream)](https://badges.pufler.dev) [![Updated Badge](https://badges.pufler.dev/updated/libersoft-org/live-stream)](https://badges.pufler.dev) [![Visits Badge](https://badges.pufler.dev/visits/libersoft-org/live-stream)](https://badges.pufler.dev)
 
+This repository contains a live streaming web service for streaming video files and camera streams.
+
 ## Development state
 
 - Early stage, not completed
