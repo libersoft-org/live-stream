@@ -20,7 +20,7 @@ class Database {
    this.close();
    return res;
   } catch (ex) {
-   Common.addLog(ex);
+   Common.addLog(ex, 2);
   }
  }
 
@@ -32,7 +32,7 @@ class Database {
    });
    this.close();
   } catch (ex) {
-   Common.addLog(ex);
+   Common.addLog(ex, 2);
   }
  }
 
@@ -40,7 +40,7 @@ class Database {
   try {
    return (await this.read('SELECT COUNT(*) AS cnt FROM sqlite_master WHERE type = "table" AND name = "' + name + '"'))[0].cnt == 1 ? true : false;
   } catch (ex) {
-   Common.addLog(ex);
+   Common.addLog(ex, 2);
   }
  }
 }

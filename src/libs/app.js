@@ -33,7 +33,7 @@ class App {
    this.webServer = new WebServer();
    this.webServer.run();
   } catch (ex) {
-   Common.addLog(ex);
+   Common.addLog(ex, 2);
   }
  }
 

@@ -20,7 +20,7 @@ class Data {
    await this.db.write('INSERT INTO files (id_stream, file) VALUES (?, ?)', [ 3, 'video1.mp4' ]);
    await this.db.write('INSERT INTO files (id_stream, file) VALUES (?, ?)', [ 3, 'video2.mp4' ]);
   } catch (ex) {
-   Common.addLog({ex});
+   Common.addLog(ex, 2);
    process.exit(1);
   }
  }
